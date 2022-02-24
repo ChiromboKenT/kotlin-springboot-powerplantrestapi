@@ -1,0 +1,146 @@
+### Create Jamaah
+POST http://localhost:8080/main-api/jamaah
+X-Api-Key:9G9ZZrBy
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "JMH0001",
+  "nama_lengkap": "Dani Setiawan",
+  "nama_ayah_kandung": "Saehudin",
+  "tempat_lahir": "Depok",
+  "tgl_lahir": "22-09-1993",
+  "ktp": 1231231,
+  "nik": 1231231,
+  "paspor": 1231231,
+  "jenis_kelamin": "L",
+  "kewarganegaraan": "WNI",
+  "alamat_lengkap": "Komp.Depag Block A 23 RT/RW 001/015",
+  "pekerjaan": "PNS",
+  "pendidikan": "S1",
+  "status_calon_jamaah_haji": "Daftar",
+  "status_perkawinan": "Menikah"
+}
+
+### Create Jamaah Invalid
+POST http://localhost:8080/main-api/jamaah
+X-Api-Key: 9G9ZZrBy
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "JMH0002",
+  "nama_lengkap": "Summer Setiawan",
+  "nama_ayah_kandung": "Dani Setiawan",
+  "tempat_lahir": "Depok",
+  "tgl_lahir": "22-09-2025",
+  "ktp": 22222323,
+  "nik": 22222222,
+  "paspor": 23421231,
+  "jenis_kelamin": "P",
+  "kewarganegaraan": "WNI",
+  "alamat_lengkap": "Komp.Depag Block A 23 RT/RW 001/015",
+  "pekerjaan": "Pelajar",
+  "pendidikan": "SD",
+  "status_calon_jamaah_haji": "Daftar",
+  "status_perkawinan": "Belum Menikah"
+}
+
+### Get Jamaah
+GET http://localhost:8080/main-api/jamaah/JMH0001
+X-Api-Key: 9G9ZZrBy
+Accept: application/json
+
+### Get Jamaah Not Found
+GET http://localhost:8080/main-api/jamaah/SALAH
+X-Api-Key: 9G9ZZrBy
+Accept: application/json
+
+### Update Jamaah
+PUT http://localhost:8080/main-api/jamaah/JMH0001
+X-Api-Key: 9G9ZZrBy
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nama_lengkap": "Maya Triyanti",
+  "nama_ayah_kandung": "Saehudin",
+  "tempat_lahir": "Depok",
+  "tgl_lahir": "15-06-1994",
+  "ktp": 2221231,
+  "nik": 2221231,
+  "paspor": 2231232,
+  "jenis_kelamin": "P",
+  "kewarganegaraan": "WNI",
+  "alamat_lengkap": "Komp.Depag Block A 23 RT/RW 001/015",
+  "pekerjaan": "PNS",
+  "pendidikan": "S1",
+  "status_calon_jamaah_haji": "Daftar",
+  "status_perkawinan": "Menikah"
+}
+
+### Update Jamaah Not Found
+PUT http://localhost:8080/main-api/jamaah/SALAH
+X-Api-Key: 9G9ZZrBy
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nama_lengkap": "Maya Triyanti",
+  "nama_ayah_kandung": "Saehudin",
+  "tempat_lahir": "Depok",
+  "tgl_lahir": "15-06-1994",
+  "ktp": 2221231,
+  "nik": 2221231,
+  "paspor": 2231232,
+  "jenis_kelamin": "P",
+  "kewarganegaraan": "WNI",
+  "alamat_lengkap": "Komp.Depag Block A 23 RT/RW 001/015",
+  "pekerjaan": "PNS",
+  "pendidikan": "S1",
+  "status_calon_jamaah_haji": "Daftar",
+  "status_perkawinan": "Menikah"
+}
+
+### Update Jamaah With Invalid Body
+PUT http://localhost:8080/main-api/jamaah/JMH0001
+X-Api-Key: 9G9ZZrBy
+Content-Type: application/json
+Accept: application/json
+
+{
+  "nama_lengkap": "",
+  "nama_ayah_kandung": "",
+  "tempat_lahir": "",
+  "tgl_lahir": "",
+  "ktp": null,
+  "nik": null,
+  "paspor": null,
+  "jenis_kelamin": "P",
+  "kewarganegaraan": "WNI",
+  "alamat_lengkap": "Komp.Depag Block A 23 RT/RW 001/015",
+  "pekerjaan": "PNS",
+  "pendidikan": "S1",
+  "status_calon_jamaah_haji": "Daftar",
+  "status_perkawinan": "Menikah"
+}
+
+### Delete Jamaah
+DELETE http://localhost:8080/main-api/jamaah/JMH0001
+X-Api-Key: 9G9ZZrBy
+Accept: application/json
+
+### List Jamaah
+GET http://localhost:8080/main-api/jamaahs
+X-Api-Key: 9G9ZZrBy
+Accept: application/json
+
+### List Jamaah With Size Parameter
+GET http://localhost:8080/main-api/jamaahs?size=5
+X-Api-Key: 9G9ZZrBy
+Accept: application/json
+
+### List Jamaah With Size Parameter And Page Parameter
+GET http://localhost:8080/main-api/jamaahs?size=5?&page=1
+X-Api-Key: 9G9ZZrBy
+Accept: application/json

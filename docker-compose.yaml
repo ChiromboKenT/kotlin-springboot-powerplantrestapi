@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+  api-powerplant:
+    image: powerplantcontainerregistry.azurecr.io/tamken97/spring-kotlin-powerplant-api:1.0.0
+    depends_on:
+      - dbpostgresql
+    container_name: powerplant-api
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      DATABASE_USERNAME: powerplant_test
+      DATABASE_PASSWORD: PNSJkxXvVNDAhePMuExTBuRR
+      DATABASE_URL: jdbc:postgresql://dbpostgresql:5432/powerplant
+  dbpostgresql:
+    container_name: "postgres-powerplant"
+    image: mcr.microsoft.com/oss/mirror/docker.io/library/postgres:12.9-bullseye
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: PNSJkxXvVNDAhePMuExTBuRR
+      POSTGRES_USER: powerplant_test
+      POSTGRES_DB: powerplant

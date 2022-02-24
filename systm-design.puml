@@ -1,0 +1,29 @@
+@startuml
+!theme amiga
+actor "User" as user
+
+node "Yuk-Haji-restful-api" {
+    component "Controller" as controller
+    note left of controller: Main API from HTTP
+
+    component "Service" as service
+    note left of service: Bisnis logic Layer
+
+    component "Repository" as repository
+    note left of repository:  Meta Data Layer
+}
+
+database "PostgreSQL" as database
+note left of database: Entity data class Jamaah
+
+user --> controller: Req
+controller --> service: Call
+service --> repository: Call
+repository --> database: Call
+
+database --> repository: Res
+repository --> service: Res
+service --> controller: Res
+controller --> user: Res
+
+@enduml

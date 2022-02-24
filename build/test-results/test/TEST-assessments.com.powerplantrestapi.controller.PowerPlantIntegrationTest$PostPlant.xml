@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="POST api/add-plant" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-02-24T12:37:36" hostname="DESKTOP-6G7VJHS" time="0.372">
+  <properties/>
+  <testcase name="should return CREATED status code()" classname="assessments.com.powerplantrestapi.controller.PowerPlantIntegrationTest$PostPlant" time="0.196"/>
+  <testcase name="should return 400 status code()" classname="assessments.com.powerplantrestapi.controller.PowerPlantIntegrationTest$PostPlant" time="0.059"/>
+  <testcase name="should return unsupported media type()" classname="assessments.com.powerplantrestapi.controller.PowerPlantIntegrationTest$PostPlant" time="0.035"/>
+  <testcase name="should return not authenticated()" classname="assessments.com.powerplantrestapi.controller.PowerPlantIntegrationTest$PostPlant" time="0.031"/>
+  <testcase name="should return bad request for empty post()" classname="assessments.com.powerplantrestapi.controller.PowerPlantIntegrationTest$PostPlant" time="0.043"/>
+  <system-out><![CDATA[2022-02-24 14:37:36.839  INFO 3384 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [assessments.com.powerplantrestapi.controller.base.BaseIntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2022-02-24 14:37:36.840  INFO 3384 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [assessments.com.powerplantrestapi.controller.base.BaseIntegrationTest]: BaseIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-02-24 14:37:36.842  INFO 3384 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration assessments.com.powerplantrestapi.KotlinRestfulApiApplication for test class assessments.com.powerplantrestapi.controller.PowerPlantIntegrationTest$PostPlant
+2022-02-24 14:37:36.844  INFO 3384 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2022-02-24 14:37:36.845  INFO 3384 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@284e68ae, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@456c6754, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@72de1d86, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@9124278, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@524250ec, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7432cb37, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7602da1a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6d985720, org.springframework.test.context.event.EventPublishingTestExecutionListener@2d1dbf4f, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4f94b2a8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2f26634a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2810d9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@408f3054, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2a64cb1f, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3644d12a]
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    select
+        powerplant0_.sequence_number as sequence1_1_0_,
+        powerplant0_.created_at as created_2_1_0_,
+        powerplant0_.generator_id as generato3_1_0_,
+        powerplant0_.generator_status as generato4_1_0_,
+        powerplant0_.genntan as genntan5_1_0_,
+        powerplant0_.plant_name as plant_na6_1_0_,
+        powerplant0_.pstatabb as pstatabb7_1_0_,
+        powerplant0_.updated_at as updated_8_1_0_,
+        powerplant0_.year as year9_1_0_ 
+    from
+        powerplant powerplant0_ 
+    where
+        powerplant0_.sequence_number=?
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    select
+        powerplant0_.sequence_number as sequence1_1_0_,
+        powerplant0_.created_at as created_2_1_0_,
+        powerplant0_.generator_id as generato3_1_0_,
+        powerplant0_.generator_status as generato4_1_0_,
+        powerplant0_.genntan as genntan5_1_0_,
+        powerplant0_.plant_name as plant_na6_1_0_,
+        powerplant0_.pstatabb as pstatabb7_1_0_,
+        powerplant0_.updated_at as updated_8_1_0_,
+        powerplant0_.year as year9_1_0_ 
+    from
+        powerplant powerplant0_ 
+    where
+        powerplant0_.sequence_number=?
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    insert 
+    into
+        powerplant
+        (created_at, generator_id, generator_status, genntan, plant_name, pstatabb, updated_at, year, sequence_number) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        powerplant
+        (created_at, generator_id, generator_status, genntan, plant_name, pstatabb, updated_at, year, sequence_number) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        powerplant
+        (created_at, generator_id, generator_status, genntan, plant_name, pstatabb, updated_at, year, sequence_number) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-02-24 14:37:36.883  INFO 3384 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2022-02-24 14:37:36.883  INFO 3384 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-02-24 14:37:36.884  INFO 3384 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        api_keys apikey0_ 
+    where
+        apikey0_.id=?
+CreatePowerPlantRequest(sequenceNumber=2, generatorId=23E, plantName=Alukele, pstatabb=#rER, year=2007, generatorStatus=RE, genntan=123456)
+[]
+Hibernate: 
+    select
+        powerplant0_.sequence_number as sequence1_1_0_,
+        powerplant0_.created_at as created_2_1_0_,
+        powerplant0_.generator_id as generato3_1_0_,
+        powerplant0_.generator_status as generato4_1_0_,
+        powerplant0_.genntan as genntan5_1_0_,
+        powerplant0_.plant_name as plant_na6_1_0_,
+        powerplant0_.pstatabb as pstatabb7_1_0_,
+        powerplant0_.updated_at as updated_8_1_0_,
+        powerplant0_.year as year9_1_0_ 
+    from
+        powerplant powerplant0_ 
+    where
+        powerplant0_.sequence_number=?
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    insert 
+    into
+        powerplant
+        (created_at, generator_id, generator_status, genntan, plant_name, pstatabb, updated_at, year, sequence_number) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    select
+        powerplant0_.sequence_number as sequence1_1_0_,
+        powerplant0_.created_at as created_2_1_0_,
+        powerplant0_.generator_id as generato3_1_0_,
+        powerplant0_.generator_status as generato4_1_0_,
+        powerplant0_.genntan as genntan5_1_0_,
+        powerplant0_.plant_name as plant_na6_1_0_,
+        powerplant0_.pstatabb as pstatabb7_1_0_,
+        powerplant0_.updated_at as updated_8_1_0_,
+        powerplant0_.year as year9_1_0_ 
+    from
+        powerplant powerplant0_ 
+    where
+        powerplant0_.sequence_number=?
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    select
+        powerplant0_.sequence_number as sequence1_1_0_,
+        powerplant0_.created_at as created_2_1_0_,
+        powerplant0_.generator_id as generato3_1_0_,
+        powerplant0_.generator_status as generato4_1_0_,
+        powerplant0_.genntan as genntan5_1_0_,
+        powerplant0_.plant_name as plant_na6_1_0_,
+        powerplant0_.pstatabb as pstatabb7_1_0_,
+        powerplant0_.updated_at as updated_8_1_0_,
+        powerplant0_.year as year9_1_0_ 
+    from
+        powerplant powerplant0_ 
+    where
+        powerplant0_.sequence_number=?
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    insert 
+    into
+        powerplant
+        (created_at, generator_id, generator_status, genntan, plant_name, pstatabb, updated_at, year, sequence_number) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        powerplant
+        (created_at, generator_id, generator_status, genntan, plant_name, pstatabb, updated_at, year, sequence_number) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        powerplant
+        (created_at, generator_id, generator_status, genntan, plant_name, pstatabb, updated_at, year, sequence_number) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-02-24 14:37:37.078  INFO 3384 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2022-02-24 14:37:37.078  INFO 3384 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-02-24 14:37:37.079  INFO 3384 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        api_keys apikey0_ 
+    where
+        apikey0_.id=?
+CreatePowerPlantRequest(sequenceNumber=2, generatorId=23E, plantName=, pstatabb=#rER, year=2007, generatorStatus=RE, genntan=123456)
+[ConstraintViolationImpl{interpolatedMessage='must not be blank', propertyPath=plantName, rootBeanClass=class assessments.com.powerplantrestapi.model.CreatePowerPlantRequest, messageTemplate='{javax.validation.constraints.NotBlank.message}'}]
+
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    select
+        powerplant0_.sequence_number as sequence1_1_0_,
+        powerplant0_.created_at as created_2_1_0_,
+        powerplant0_.generator_id as generato3_1_0_,
+        powerplant0_.generator_status as generato4_1_0_,
+        powerplant0_.genntan as genntan5_1_0_,
+        powerplant0_.plant_name as plant_na6_1_0_,
+        powerplant0_.pstatabb as pstatabb7_1_0_,
+        powerplant0_.updated_at as updated_8_1_0_,
+        powerplant0_.year as year9_1_0_ 
+    from
+        powerplant powerplant0_ 
+    where
+        powerplant0_.sequence_number=?
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    select
+        powerplant0_.sequence_number as sequence1_1_0_,
+        powerplant0_.created_at as created_2_1_0_,
+        powerplant0_.generator_id as generato3_1_0_,
+        powerplant0_.generator_status as generato4_1_0_,
+        powerplant0_.genntan as genntan5_1_0_,
+        powerplant0_.plant_name as plant_na6_1_0_,
+        powerplant0_.pstatabb as pstatabb7_1_0_,
+        powerplant0_.updated_at as updated_8_1_0_,
+        powerplant0_.year as year9_1_0_ 
+    from
+        powerplant powerplant0_ 
+    where
+        powerplant0_.sequence_number=?
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    insert 
+    into
+        powerplant
+        (created_at, generator_id, generator_status, genntan, plant_name, pstatabb, updated_at, year, sequence_number) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        powerplant
+        (created_at, generator_id, generator_status, genntan, plant_name, pstatabb, updated_at, year, sequence_number) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        powerplant
+        (created_at, generator_id, generator_status, genntan, plant_name, pstatabb, updated_at, year, sequence_number) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-02-24 14:37:37.134  INFO 3384 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2022-02-24 14:37:37.134  INFO 3384 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-02-24 14:37:37.135  INFO 3384 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2022-02-24 14:37:37.140  WARN 3384 --- [    Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type '' not supported]
+
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    select
+        powerplant0_.sequence_number as sequence1_1_0_,
+        powerplant0_.created_at as created_2_1_0_,
+        powerplant0_.generator_id as generato3_1_0_,
+        powerplant0_.generator_status as generato4_1_0_,
+        powerplant0_.genntan as genntan5_1_0_,
+        powerplant0_.plant_name as plant_na6_1_0_,
+        powerplant0_.pstatabb as pstatabb7_1_0_,
+        powerplant0_.updated_at as updated_8_1_0_,
+        powerplant0_.year as year9_1_0_ 
+    from
+        powerplant powerplant0_ 
+    where
+        powerplant0_.sequence_number=?
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    select
+        powerplant0_.sequence_number as sequence1_1_0_,
+        powerplant0_.created_at as created_2_1_0_,
+        powerplant0_.generator_id as generato3_1_0_,
+        powerplant0_.generator_status as generato4_1_0_,
+        powerplant0_.genntan as genntan5_1_0_,
+        powerplant0_.plant_name as plant_na6_1_0_,
+        powerplant0_.pstatabb as pstatabb7_1_0_,
+        powerplant0_.updated_at as updated_8_1_0_,
+        powerplant0_.year as year9_1_0_ 
+    from
+        powerplant powerplant0_ 
+    where
+        powerplant0_.sequence_number=?
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    insert 
+    into
+        powerplant
+        (created_at, generator_id, generator_status, genntan, plant_name, pstatabb, updated_at, year, sequence_number) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        powerplant
+        (created_at, generator_id, generator_status, genntan, plant_name, pstatabb, updated_at, year, sequence_number) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        powerplant
+        (created_at, generator_id, generator_status, genntan, plant_name, pstatabb, updated_at, year, sequence_number) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-02-24 14:37:37.170  INFO 3384 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2022-02-24 14:37:37.171  INFO 3384 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-02-24 14:37:37.171  INFO 3384 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    select
+        powerplant0_.sequence_number as sequence1_1_0_,
+        powerplant0_.created_at as created_2_1_0_,
+        powerplant0_.generator_id as generato3_1_0_,
+        powerplant0_.generator_status as generato4_1_0_,
+        powerplant0_.genntan as genntan5_1_0_,
+        powerplant0_.plant_name as plant_na6_1_0_,
+        powerplant0_.pstatabb as pstatabb7_1_0_,
+        powerplant0_.updated_at as updated_8_1_0_,
+        powerplant0_.year as year9_1_0_ 
+    from
+        powerplant powerplant0_ 
+    where
+        powerplant0_.sequence_number=?
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    select
+        powerplant0_.sequence_number as sequence1_1_0_,
+        powerplant0_.created_at as created_2_1_0_,
+        powerplant0_.generator_id as generato3_1_0_,
+        powerplant0_.generator_status as generato4_1_0_,
+        powerplant0_.genntan as genntan5_1_0_,
+        powerplant0_.plant_name as plant_na6_1_0_,
+        powerplant0_.pstatabb as pstatabb7_1_0_,
+        powerplant0_.updated_at as updated_8_1_0_,
+        powerplant0_.year as year9_1_0_ 
+    from
+        powerplant powerplant0_ 
+    where
+        powerplant0_.sequence_number=?
+Hibernate: 
+    select
+        nextval ('hibernate_sequence')
+Hibernate: 
+    insert 
+    into
+        powerplant
+        (created_at, generator_id, generator_status, genntan, plant_name, pstatabb, updated_at, year, sequence_number) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        powerplant
+        (created_at, generator_id, generator_status, genntan, plant_name, pstatabb, updated_at, year, sequence_number) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    insert 
+    into
+        powerplant
+        (created_at, generator_id, generator_status, genntan, plant_name, pstatabb, updated_at, year, sequence_number) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-02-24 14:37:37.208  INFO 3384 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring TestDispatcherServlet ''
+2022-02-24 14:37:37.208  INFO 3384 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-02-24 14:37:37.209  INFO 3384 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        api_keys apikey0_ 
+    where
+        apikey0_.id=?
+2022-02-24 14:37:37.218  WARN 3384 --- [    Test worker] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<assessments.com.powerplantrestapi.model.WebResponse<assessments.com.powerplantrestapi.model.PowerPlantResponse>> assessments.com.powerplantrestapi.controller.PowerPlantController.createPowerPlant(assessments.com.powerplantrestapi.model.CreatePowerPlantRequest)]
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
