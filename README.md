@@ -1,13 +1,19 @@
 # API Spec (Power Plant Api)
 
-##Author Kenny Chirombo
+## Author Kenny Chirombo
 
-#Live Hosted on Azure
+# Live Hosted on Azure
 
 - http://40.127.19.49:8080/
-  Run in Post man to include X-Api-Key : a4db08b7-5729-4ba9-8c08-f2df493465a
+- Run in Post man to include X-Api-Key : a4db08b7-5729-4ba9-8c08-f2df493465a
 
-## Setup Database
+## Running Locally
+
+clone repository
+
+```
+  git clone https://github.com/ChiromboKenT/kotlin-springboot-powerplantrestapi.git
+```
 
 - Run Docker Containers
 
