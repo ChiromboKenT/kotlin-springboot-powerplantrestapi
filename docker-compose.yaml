@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   api-powerplant:
-    image: powerplantcontainerregistry.azurecr.io/tamken97/spring-kotlin-powerplant-api:1.0.0
+    image: powerplantcontainerregistry.azurecr.io/powerplant-rest-api:1.0.0
     depends_on:
       - dbpostgresql
     container_name: powerplant-api
