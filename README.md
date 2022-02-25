@@ -4,7 +4,7 @@
 
 # Live Hosted on Azure
 
-- http://40.127.19.49:8080/
+- http://powerplantapi.southafricanorth.azurecontainer.io:8080/
 - Run in Post man to include X-Api-Key : a4db08b7-5729-4ba9-8c08-f2df493465a
 
 ## Running Locally
